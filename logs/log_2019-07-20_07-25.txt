@@ -1,0 +1,1201 @@
+[[07/20/2019 07:25:11 AM]] 
+new run with parameters:
+{'batch_size': 4,
+ 'checkpoint_dir': './new_checkpoints',
+ 'dilations': [1,
+               2,
+               4,
+               8,
+               16,
+               32,
+               64,
+               128,
+               1,
+               2,
+               4,
+               8,
+               16,
+               32,
+               64,
+               128,
+               1,
+               2,
+               4,
+               8,
+               16,
+               32,
+               64,
+               128],
+ 'early_stopping_steps': 5000,
+ 'enable_parameter_averaging': False,
+ 'filter_widths': [2,
+                   2,
+                   2,
+                   2,
+                   2,
+                   2,
+                   2,
+                   2,
+                   2,
+                   2,
+                   2,
+                   2,
+                   2,
+                   2,
+                   2,
+                   2,
+                   2,
+                   2,
+                   2,
+                   2,
+                   2,
+                   2,
+                   2,
+                   2],
+ 'grad_clip': 20,
+ 'keep_prob_scalar': 1.0,
+ 'learning_rate': 0.0001,
+ 'log_dir': './logs',
+ 'log_interval': 10,
+ 'loss_averaging_window': 100,
+ 'min_steps_to_checkpoint': 500,
+ 'num_decode_steps': 32,
+ 'num_restarts': 2,
+ 'num_training_steps': 20000,
+ 'num_validation_batches': 1,
+ 'optimizer': 'adam',
+ 'prediction_dir': './predictions',
+ 'reader': <cnn_fc.DataReader object at 0x7f66818c0f10>,
+ 'regularization_constant': 0.0001,
+ 'residual_channels': 32,
+ 'skip_channels': 32,
+ 'warm_start_init_step': 0}
+[[07/20/2019 07:25:26 AM]] all parameters:
+[[07/20/2019 07:25:26 AM]] [(u'Variable:0', []),
+ (u'Variable_1:0', []),
+ (u'x-proj-encode/weights:0', [10, 32]),
+ (u'x-proj-encode/biases:0', [32]),
+ (u'dilated-conv-encode-0/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-0/biases:0', [64]),
+ (u'dilated-conv-proj-encode-0/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-0/biases:0', [64]),
+ (u'dilated-conv-encode-1/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-1/biases:0', [64]),
+ (u'dilated-conv-proj-encode-1/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-1/biases:0', [64]),
+ (u'dilated-conv-encode-2/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-2/biases:0', [64]),
+ (u'dilated-conv-proj-encode-2/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-2/biases:0', [64]),
+ (u'dilated-conv-encode-3/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-3/biases:0', [64]),
+ (u'dilated-conv-proj-encode-3/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-3/biases:0', [64]),
+ (u'dilated-conv-encode-4/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-4/biases:0', [64]),
+ (u'dilated-conv-proj-encode-4/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-4/biases:0', [64]),
+ (u'dilated-conv-encode-5/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-5/biases:0', [64]),
+ (u'dilated-conv-proj-encode-5/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-5/biases:0', [64]),
+ (u'dilated-conv-encode-6/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-6/biases:0', [64]),
+ (u'dilated-conv-proj-encode-6/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-6/biases:0', [64]),
+ (u'dilated-conv-encode-7/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-7/biases:0', [64]),
+ (u'dilated-conv-proj-encode-7/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-7/biases:0', [64]),
+ (u'dilated-conv-encode-8/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-8/biases:0', [64]),
+ (u'dilated-conv-proj-encode-8/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-8/biases:0', [64]),
+ (u'dilated-conv-encode-9/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-9/biases:0', [64]),
+ (u'dilated-conv-proj-encode-9/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-9/biases:0', [64]),
+ (u'dilated-conv-encode-10/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-10/biases:0', [64]),
+ (u'dilated-conv-proj-encode-10/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-10/biases:0', [64]),
+ (u'dilated-conv-encode-11/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-11/biases:0', [64]),
+ (u'dilated-conv-proj-encode-11/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-11/biases:0', [64]),
+ (u'dilated-conv-encode-12/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-12/biases:0', [64]),
+ (u'dilated-conv-proj-encode-12/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-12/biases:0', [64]),
+ (u'dilated-conv-encode-13/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-13/biases:0', [64]),
+ (u'dilated-conv-proj-encode-13/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-13/biases:0', [64]),
+ (u'dilated-conv-encode-14/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-14/biases:0', [64]),
+ (u'dilated-conv-proj-encode-14/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-14/biases:0', [64]),
+ (u'dilated-conv-encode-15/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-15/biases:0', [64]),
+ (u'dilated-conv-proj-encode-15/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-15/biases:0', [64]),
+ (u'dilated-conv-encode-16/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-16/biases:0', [64]),
+ (u'dilated-conv-proj-encode-16/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-16/biases:0', [64]),
+ (u'dilated-conv-encode-17/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-17/biases:0', [64]),
+ (u'dilated-conv-proj-encode-17/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-17/biases:0', [64]),
+ (u'dilated-conv-encode-18/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-18/biases:0', [64]),
+ (u'dilated-conv-proj-encode-18/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-18/biases:0', [64]),
+ (u'dilated-conv-encode-19/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-19/biases:0', [64]),
+ (u'dilated-conv-proj-encode-19/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-19/biases:0', [64]),
+ (u'dilated-conv-encode-20/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-20/biases:0', [64]),
+ (u'dilated-conv-proj-encode-20/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-20/biases:0', [64]),
+ (u'dilated-conv-encode-21/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-21/biases:0', [64]),
+ (u'dilated-conv-proj-encode-21/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-21/biases:0', [64]),
+ (u'dilated-conv-encode-22/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-22/biases:0', [64]),
+ (u'dilated-conv-proj-encode-22/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-22/biases:0', [64]),
+ (u'dilated-conv-encode-23/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-23/biases:0', [64]),
+ (u'dilated-conv-proj-encode-23/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-23/biases:0', [64]),
+ (u'dense-encode-1/weights:0', [768, 128]),
+ (u'dense-encode-1/biases:0', [128]),
+ (u'dense-encode-2/weights:0', [128, 1]),
+ (u'dense-encode-2/biases:0', [1]),
+ (u'x-proj-decode/weights:0', [10, 32]),
+ (u'x-proj-decode/biases:0', [32]),
+ (u'dilated-conv-decode-0/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-0/biases:0', [64]),
+ (u'dilated-conv-proj-decode-0/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-0/biases:0', [64]),
+ (u'dilated-conv-decode-1/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-1/biases:0', [64]),
+ (u'dilated-conv-proj-decode-1/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-1/biases:0', [64]),
+ (u'dilated-conv-decode-2/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-2/biases:0', [64]),
+ (u'dilated-conv-proj-decode-2/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-2/biases:0', [64]),
+ (u'dilated-conv-decode-3/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-3/biases:0', [64]),
+ (u'dilated-conv-proj-decode-3/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-3/biases:0', [64]),
+ (u'dilated-conv-decode-4/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-4/biases:0', [64]),
+ (u'dilated-conv-proj-decode-4/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-4/biases:0', [64]),
+ (u'dilated-conv-decode-5/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-5/biases:0', [64]),
+ (u'dilated-conv-proj-decode-5/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-5/biases:0', [64]),
+ (u'dilated-conv-decode-6/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-6/biases:0', [64]),
+ (u'dilated-conv-proj-decode-6/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-6/biases:0', [64]),
+ (u'dilated-conv-decode-7/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-7/biases:0', [64]),
+ (u'dilated-conv-proj-decode-7/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-7/biases:0', [64]),
+ (u'dilated-conv-decode-8/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-8/biases:0', [64]),
+ (u'dilated-conv-proj-decode-8/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-8/biases:0', [64]),
+ (u'dilated-conv-decode-9/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-9/biases:0', [64]),
+ (u'dilated-conv-proj-decode-9/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-9/biases:0', [64]),
+ (u'dilated-conv-decode-10/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-10/biases:0', [64]),
+ (u'dilated-conv-proj-decode-10/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-10/biases:0', [64]),
+ (u'dilated-conv-decode-11/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-11/biases:0', [64]),
+ (u'dilated-conv-proj-decode-11/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-11/biases:0', [64]),
+ (u'dilated-conv-decode-12/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-12/biases:0', [64]),
+ (u'dilated-conv-proj-decode-12/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-12/biases:0', [64]),
+ (u'dilated-conv-decode-13/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-13/biases:0', [64]),
+ (u'dilated-conv-proj-decode-13/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-13/biases:0', [64]),
+ (u'dilated-conv-decode-14/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-14/biases:0', [64]),
+ (u'dilated-conv-proj-decode-14/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-14/biases:0', [64]),
+ (u'dilated-conv-decode-15/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-15/biases:0', [64]),
+ (u'dilated-conv-proj-decode-15/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-15/biases:0', [64]),
+ (u'dilated-conv-decode-16/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-16/biases:0', [64]),
+ (u'dilated-conv-proj-decode-16/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-16/biases:0', [64]),
+ (u'dilated-conv-decode-17/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-17/biases:0', [64]),
+ (u'dilated-conv-proj-decode-17/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-17/biases:0', [64]),
+ (u'dilated-conv-decode-18/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-18/biases:0', [64]),
+ (u'dilated-conv-proj-decode-18/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-18/biases:0', [64]),
+ (u'dilated-conv-decode-19/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-19/biases:0', [64]),
+ (u'dilated-conv-proj-decode-19/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-19/biases:0', [64]),
+ (u'dilated-conv-decode-20/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-20/biases:0', [64]),
+ (u'dilated-conv-proj-decode-20/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-20/biases:0', [64]),
+ (u'dilated-conv-decode-21/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-21/biases:0', [64]),
+ (u'dilated-conv-proj-decode-21/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-21/biases:0', [64]),
+ (u'dilated-conv-decode-22/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-22/biases:0', [64]),
+ (u'dilated-conv-proj-decode-22/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-22/biases:0', [64]),
+ (u'dilated-conv-decode-23/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-23/biases:0', [64]),
+ (u'dilated-conv-proj-decode-23/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-23/biases:0', [64]),
+ (u'dense-decode-1/weights:0', [768, 128]),
+ (u'dense-decode-1/biases:0', [128]),
+ (u'dense-decode-2/weights:0', [128, 1]),
+ (u'dense-decode-2/biases:0', [1]),
+ (u'beta1_power:0', []),
+ (u'beta2_power:0', []),
+ (u'x-proj-encode/weights/Adam:0', [10, 32]),
+ (u'x-proj-encode/weights/Adam_1:0', [10, 32]),
+ (u'x-proj-encode/biases/Adam:0', [32]),
+ (u'x-proj-encode/biases/Adam_1:0', [32]),
+ (u'dilated-conv-encode-0/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-encode-0/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-encode-0/biases/Adam:0', [64]),
+ (u'dilated-conv-encode-0/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-encode-0/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-encode-0/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-encode-0/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-encode-0/biases/Adam_1:0', [64]),
+ (u'dilated-conv-encode-1/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-encode-1/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-encode-1/biases/Adam:0', [64]),
+ (u'dilated-conv-encode-1/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-encode-1/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-encode-1/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-encode-1/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-encode-1/biases/Adam_1:0', [64]),
+ (u'dilated-conv-encode-2/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-encode-2/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-encode-2/biases/Adam:0', [64]),
+ (u'dilated-conv-encode-2/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-encode-2/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-encode-2/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-encode-2/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-encode-2/biases/Adam_1:0', [64]),
+ (u'dilated-conv-encode-3/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-encode-3/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-encode-3/biases/Adam:0', [64]),
+ (u'dilated-conv-encode-3/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-encode-3/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-encode-3/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-encode-3/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-encode-3/biases/Adam_1:0', [64]),
+ (u'dilated-conv-encode-4/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-encode-4/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-encode-4/biases/Adam:0', [64]),
+ (u'dilated-conv-encode-4/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-encode-4/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-encode-4/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-encode-4/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-encode-4/biases/Adam_1:0', [64]),
+ (u'dilated-conv-encode-5/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-encode-5/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-encode-5/biases/Adam:0', [64]),
+ (u'dilated-conv-encode-5/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-encode-5/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-encode-5/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-encode-5/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-encode-5/biases/Adam_1:0', [64]),
+ (u'dilated-conv-encode-6/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-encode-6/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-encode-6/biases/Adam:0', [64]),
+ (u'dilated-conv-encode-6/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-encode-6/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-encode-6/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-encode-6/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-encode-6/biases/Adam_1:0', [64]),
+ (u'dilated-conv-encode-7/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-encode-7/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-encode-7/biases/Adam:0', [64]),
+ (u'dilated-conv-encode-7/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-encode-7/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-encode-7/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-encode-7/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-encode-7/biases/Adam_1:0', [64]),
+ (u'dilated-conv-encode-8/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-encode-8/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-encode-8/biases/Adam:0', [64]),
+ (u'dilated-conv-encode-8/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-encode-8/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-encode-8/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-encode-8/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-encode-8/biases/Adam_1:0', [64]),
+ (u'dilated-conv-encode-9/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-encode-9/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-encode-9/biases/Adam:0', [64]),
+ (u'dilated-conv-encode-9/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-encode-9/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-encode-9/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-encode-9/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-encode-9/biases/Adam_1:0', [64]),
+ (u'dilated-conv-encode-10/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-encode-10/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-encode-10/biases/Adam:0', [64]),
+ (u'dilated-conv-encode-10/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-encode-10/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-encode-10/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-encode-10/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-encode-10/biases/Adam_1:0', [64]),
+ (u'dilated-conv-encode-11/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-encode-11/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-encode-11/biases/Adam:0', [64]),
+ (u'dilated-conv-encode-11/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-encode-11/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-encode-11/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-encode-11/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-encode-11/biases/Adam_1:0', [64]),
+ (u'dilated-conv-encode-12/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-encode-12/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-encode-12/biases/Adam:0', [64]),
+ (u'dilated-conv-encode-12/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-encode-12/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-encode-12/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-encode-12/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-encode-12/biases/Adam_1:0', [64]),
+ (u'dilated-conv-encode-13/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-encode-13/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-encode-13/biases/Adam:0', [64]),
+ (u'dilated-conv-encode-13/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-encode-13/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-encode-13/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-encode-13/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-encode-13/biases/Adam_1:0', [64]),
+ (u'dilated-conv-encode-14/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-encode-14/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-encode-14/biases/Adam:0', [64]),
+ (u'dilated-conv-encode-14/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-encode-14/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-encode-14/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-encode-14/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-encode-14/biases/Adam_1:0', [64]),
+ (u'dilated-conv-encode-15/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-encode-15/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-encode-15/biases/Adam:0', [64]),
+ (u'dilated-conv-encode-15/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-encode-15/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-encode-15/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-encode-15/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-encode-15/biases/Adam_1:0', [64]),
+ (u'dilated-conv-encode-16/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-encode-16/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-encode-16/biases/Adam:0', [64]),
+ (u'dilated-conv-encode-16/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-encode-16/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-encode-16/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-encode-16/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-encode-16/biases/Adam_1:0', [64]),
+ (u'dilated-conv-encode-17/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-encode-17/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-encode-17/biases/Adam:0', [64]),
+ (u'dilated-conv-encode-17/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-encode-17/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-encode-17/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-encode-17/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-encode-17/biases/Adam_1:0', [64]),
+ (u'dilated-conv-encode-18/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-encode-18/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-encode-18/biases/Adam:0', [64]),
+ (u'dilated-conv-encode-18/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-encode-18/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-encode-18/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-encode-18/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-encode-18/biases/Adam_1:0', [64]),
+ (u'dilated-conv-encode-19/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-encode-19/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-encode-19/biases/Adam:0', [64]),
+ (u'dilated-conv-encode-19/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-encode-19/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-encode-19/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-encode-19/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-encode-19/biases/Adam_1:0', [64]),
+ (u'dilated-conv-encode-20/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-encode-20/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-encode-20/biases/Adam:0', [64]),
+ (u'dilated-conv-encode-20/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-encode-20/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-encode-20/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-encode-20/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-encode-20/biases/Adam_1:0', [64]),
+ (u'dilated-conv-encode-21/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-encode-21/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-encode-21/biases/Adam:0', [64]),
+ (u'dilated-conv-encode-21/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-encode-21/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-encode-21/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-encode-21/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-encode-21/biases/Adam_1:0', [64]),
+ (u'dilated-conv-encode-22/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-encode-22/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-encode-22/biases/Adam:0', [64]),
+ (u'dilated-conv-encode-22/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-encode-22/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-encode-22/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-encode-22/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-encode-22/biases/Adam_1:0', [64]),
+ (u'dilated-conv-encode-23/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-encode-23/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-encode-23/biases/Adam:0', [64]),
+ (u'dilated-conv-encode-23/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-encode-23/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-encode-23/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-encode-23/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-encode-23/biases/Adam_1:0', [64]),
+ (u'dense-encode-1/weights/Adam:0', [768, 128]),
+ (u'dense-encode-1/weights/Adam_1:0', [768, 128]),
+ (u'dense-encode-1/biases/Adam:0', [128]),
+ (u'dense-encode-1/biases/Adam_1:0', [128]),
+ (u'dense-encode-2/weights/Adam:0', [128, 1]),
+ (u'dense-encode-2/weights/Adam_1:0', [128, 1]),
+ (u'dense-encode-2/biases/Adam:0', [1]),
+ (u'dense-encode-2/biases/Adam_1:0', [1]),
+ (u'x-proj-decode/weights/Adam:0', [10, 32]),
+ (u'x-proj-decode/weights/Adam_1:0', [10, 32]),
+ (u'x-proj-decode/biases/Adam:0', [32]),
+ (u'x-proj-decode/biases/Adam_1:0', [32]),
+ (u'dilated-conv-decode-0/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-decode-0/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-decode-0/biases/Adam:0', [64]),
+ (u'dilated-conv-decode-0/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-decode-0/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-decode-0/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-decode-0/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-decode-0/biases/Adam_1:0', [64]),
+ (u'dilated-conv-decode-1/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-decode-1/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-decode-1/biases/Adam:0', [64]),
+ (u'dilated-conv-decode-1/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-decode-1/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-decode-1/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-decode-1/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-decode-1/biases/Adam_1:0', [64]),
+ (u'dilated-conv-decode-2/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-decode-2/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-decode-2/biases/Adam:0', [64]),
+ (u'dilated-conv-decode-2/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-decode-2/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-decode-2/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-decode-2/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-decode-2/biases/Adam_1:0', [64]),
+ (u'dilated-conv-decode-3/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-decode-3/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-decode-3/biases/Adam:0', [64]),
+ (u'dilated-conv-decode-3/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-decode-3/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-decode-3/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-decode-3/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-decode-3/biases/Adam_1:0', [64]),
+ (u'dilated-conv-decode-4/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-decode-4/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-decode-4/biases/Adam:0', [64]),
+ (u'dilated-conv-decode-4/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-decode-4/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-decode-4/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-decode-4/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-decode-4/biases/Adam_1:0', [64]),
+ (u'dilated-conv-decode-5/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-decode-5/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-decode-5/biases/Adam:0', [64]),
+ (u'dilated-conv-decode-5/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-decode-5/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-decode-5/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-decode-5/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-decode-5/biases/Adam_1:0', [64]),
+ (u'dilated-conv-decode-6/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-decode-6/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-decode-6/biases/Adam:0', [64]),
+ (u'dilated-conv-decode-6/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-decode-6/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-decode-6/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-decode-6/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-decode-6/biases/Adam_1:0', [64]),
+ (u'dilated-conv-decode-7/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-decode-7/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-decode-7/biases/Adam:0', [64]),
+ (u'dilated-conv-decode-7/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-decode-7/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-decode-7/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-decode-7/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-decode-7/biases/Adam_1:0', [64]),
+ (u'dilated-conv-decode-8/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-decode-8/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-decode-8/biases/Adam:0', [64]),
+ (u'dilated-conv-decode-8/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-decode-8/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-decode-8/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-decode-8/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-decode-8/biases/Adam_1:0', [64]),
+ (u'dilated-conv-decode-9/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-decode-9/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-decode-9/biases/Adam:0', [64]),
+ (u'dilated-conv-decode-9/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-decode-9/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-decode-9/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-decode-9/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-decode-9/biases/Adam_1:0', [64]),
+ (u'dilated-conv-decode-10/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-decode-10/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-decode-10/biases/Adam:0', [64]),
+ (u'dilated-conv-decode-10/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-decode-10/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-decode-10/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-decode-10/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-decode-10/biases/Adam_1:0', [64]),
+ (u'dilated-conv-decode-11/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-decode-11/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-decode-11/biases/Adam:0', [64]),
+ (u'dilated-conv-decode-11/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-decode-11/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-decode-11/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-decode-11/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-decode-11/biases/Adam_1:0', [64]),
+ (u'dilated-conv-decode-12/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-decode-12/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-decode-12/biases/Adam:0', [64]),
+ (u'dilated-conv-decode-12/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-decode-12/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-decode-12/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-decode-12/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-decode-12/biases/Adam_1:0', [64]),
+ (u'dilated-conv-decode-13/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-decode-13/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-decode-13/biases/Adam:0', [64]),
+ (u'dilated-conv-decode-13/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-decode-13/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-decode-13/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-decode-13/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-decode-13/biases/Adam_1:0', [64]),
+ (u'dilated-conv-decode-14/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-decode-14/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-decode-14/biases/Adam:0', [64]),
+ (u'dilated-conv-decode-14/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-decode-14/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-decode-14/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-decode-14/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-decode-14/biases/Adam_1:0', [64]),
+ (u'dilated-conv-decode-15/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-decode-15/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-decode-15/biases/Adam:0', [64]),
+ (u'dilated-conv-decode-15/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-decode-15/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-decode-15/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-decode-15/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-decode-15/biases/Adam_1:0', [64]),
+ (u'dilated-conv-decode-16/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-decode-16/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-decode-16/biases/Adam:0', [64]),
+ (u'dilated-conv-decode-16/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-decode-16/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-decode-16/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-decode-16/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-decode-16/biases/Adam_1:0', [64]),
+ (u'dilated-conv-decode-17/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-decode-17/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-decode-17/biases/Adam:0', [64]),
+ (u'dilated-conv-decode-17/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-decode-17/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-decode-17/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-decode-17/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-decode-17/biases/Adam_1:0', [64]),
+ (u'dilated-conv-decode-18/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-decode-18/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-decode-18/biases/Adam:0', [64]),
+ (u'dilated-conv-decode-18/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-decode-18/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-decode-18/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-decode-18/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-decode-18/biases/Adam_1:0', [64]),
+ (u'dilated-conv-decode-19/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-decode-19/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-decode-19/biases/Adam:0', [64]),
+ (u'dilated-conv-decode-19/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-decode-19/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-decode-19/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-decode-19/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-decode-19/biases/Adam_1:0', [64]),
+ (u'dilated-conv-decode-20/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-decode-20/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-decode-20/biases/Adam:0', [64]),
+ (u'dilated-conv-decode-20/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-decode-20/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-decode-20/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-decode-20/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-decode-20/biases/Adam_1:0', [64]),
+ (u'dilated-conv-decode-21/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-decode-21/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-decode-21/biases/Adam:0', [64]),
+ (u'dilated-conv-decode-21/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-decode-21/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-decode-21/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-decode-21/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-decode-21/biases/Adam_1:0', [64]),
+ (u'dilated-conv-decode-22/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-decode-22/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-decode-22/biases/Adam:0', [64]),
+ (u'dilated-conv-decode-22/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-decode-22/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-decode-22/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-decode-22/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-decode-22/biases/Adam_1:0', [64]),
+ (u'dilated-conv-decode-23/weights/Adam:0', [2, 32, 64]),
+ (u'dilated-conv-decode-23/weights/Adam_1:0', [2, 32, 64]),
+ (u'dilated-conv-decode-23/biases/Adam:0', [64]),
+ (u'dilated-conv-decode-23/biases/Adam_1:0', [64]),
+ (u'dilated-conv-proj-decode-23/weights/Adam:0', [32, 64]),
+ (u'dilated-conv-proj-decode-23/weights/Adam_1:0', [32, 64]),
+ (u'dilated-conv-proj-decode-23/biases/Adam:0', [64]),
+ (u'dilated-conv-proj-decode-23/biases/Adam_1:0', [64]),
+ (u'dense-decode-1/weights/Adam:0', [768, 128]),
+ (u'dense-decode-1/weights/Adam_1:0', [768, 128]),
+ (u'dense-decode-1/biases/Adam:0', [128]),
+ (u'dense-decode-1/biases/Adam_1:0', [128]),
+ (u'dense-decode-2/weights/Adam:0', [128, 1]),
+ (u'dense-decode-2/weights/Adam_1:0', [128, 1]),
+ (u'dense-decode-2/biases/Adam:0', [1]),
+ (u'dense-decode-2/biases/Adam_1:0', [1])]
+[[07/20/2019 07:25:26 AM]] trainable parameters:
+[[07/20/2019 07:25:26 AM]] [(u'x-proj-encode/weights:0', [10, 32]),
+ (u'x-proj-encode/biases:0', [32]),
+ (u'dilated-conv-encode-0/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-0/biases:0', [64]),
+ (u'dilated-conv-proj-encode-0/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-0/biases:0', [64]),
+ (u'dilated-conv-encode-1/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-1/biases:0', [64]),
+ (u'dilated-conv-proj-encode-1/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-1/biases:0', [64]),
+ (u'dilated-conv-encode-2/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-2/biases:0', [64]),
+ (u'dilated-conv-proj-encode-2/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-2/biases:0', [64]),
+ (u'dilated-conv-encode-3/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-3/biases:0', [64]),
+ (u'dilated-conv-proj-encode-3/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-3/biases:0', [64]),
+ (u'dilated-conv-encode-4/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-4/biases:0', [64]),
+ (u'dilated-conv-proj-encode-4/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-4/biases:0', [64]),
+ (u'dilated-conv-encode-5/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-5/biases:0', [64]),
+ (u'dilated-conv-proj-encode-5/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-5/biases:0', [64]),
+ (u'dilated-conv-encode-6/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-6/biases:0', [64]),
+ (u'dilated-conv-proj-encode-6/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-6/biases:0', [64]),
+ (u'dilated-conv-encode-7/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-7/biases:0', [64]),
+ (u'dilated-conv-proj-encode-7/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-7/biases:0', [64]),
+ (u'dilated-conv-encode-8/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-8/biases:0', [64]),
+ (u'dilated-conv-proj-encode-8/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-8/biases:0', [64]),
+ (u'dilated-conv-encode-9/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-9/biases:0', [64]),
+ (u'dilated-conv-proj-encode-9/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-9/biases:0', [64]),
+ (u'dilated-conv-encode-10/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-10/biases:0', [64]),
+ (u'dilated-conv-proj-encode-10/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-10/biases:0', [64]),
+ (u'dilated-conv-encode-11/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-11/biases:0', [64]),
+ (u'dilated-conv-proj-encode-11/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-11/biases:0', [64]),
+ (u'dilated-conv-encode-12/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-12/biases:0', [64]),
+ (u'dilated-conv-proj-encode-12/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-12/biases:0', [64]),
+ (u'dilated-conv-encode-13/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-13/biases:0', [64]),
+ (u'dilated-conv-proj-encode-13/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-13/biases:0', [64]),
+ (u'dilated-conv-encode-14/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-14/biases:0', [64]),
+ (u'dilated-conv-proj-encode-14/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-14/biases:0', [64]),
+ (u'dilated-conv-encode-15/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-15/biases:0', [64]),
+ (u'dilated-conv-proj-encode-15/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-15/biases:0', [64]),
+ (u'dilated-conv-encode-16/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-16/biases:0', [64]),
+ (u'dilated-conv-proj-encode-16/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-16/biases:0', [64]),
+ (u'dilated-conv-encode-17/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-17/biases:0', [64]),
+ (u'dilated-conv-proj-encode-17/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-17/biases:0', [64]),
+ (u'dilated-conv-encode-18/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-18/biases:0', [64]),
+ (u'dilated-conv-proj-encode-18/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-18/biases:0', [64]),
+ (u'dilated-conv-encode-19/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-19/biases:0', [64]),
+ (u'dilated-conv-proj-encode-19/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-19/biases:0', [64]),
+ (u'dilated-conv-encode-20/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-20/biases:0', [64]),
+ (u'dilated-conv-proj-encode-20/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-20/biases:0', [64]),
+ (u'dilated-conv-encode-21/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-21/biases:0', [64]),
+ (u'dilated-conv-proj-encode-21/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-21/biases:0', [64]),
+ (u'dilated-conv-encode-22/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-22/biases:0', [64]),
+ (u'dilated-conv-proj-encode-22/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-22/biases:0', [64]),
+ (u'dilated-conv-encode-23/weights:0', [2, 32, 64]),
+ (u'dilated-conv-encode-23/biases:0', [64]),
+ (u'dilated-conv-proj-encode-23/weights:0', [32, 64]),
+ (u'dilated-conv-proj-encode-23/biases:0', [64]),
+ (u'dense-encode-1/weights:0', [768, 128]),
+ (u'dense-encode-1/biases:0', [128]),
+ (u'dense-encode-2/weights:0', [128, 1]),
+ (u'dense-encode-2/biases:0', [1]),
+ (u'x-proj-decode/weights:0', [10, 32]),
+ (u'x-proj-decode/biases:0', [32]),
+ (u'dilated-conv-decode-0/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-0/biases:0', [64]),
+ (u'dilated-conv-proj-decode-0/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-0/biases:0', [64]),
+ (u'dilated-conv-decode-1/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-1/biases:0', [64]),
+ (u'dilated-conv-proj-decode-1/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-1/biases:0', [64]),
+ (u'dilated-conv-decode-2/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-2/biases:0', [64]),
+ (u'dilated-conv-proj-decode-2/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-2/biases:0', [64]),
+ (u'dilated-conv-decode-3/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-3/biases:0', [64]),
+ (u'dilated-conv-proj-decode-3/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-3/biases:0', [64]),
+ (u'dilated-conv-decode-4/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-4/biases:0', [64]),
+ (u'dilated-conv-proj-decode-4/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-4/biases:0', [64]),
+ (u'dilated-conv-decode-5/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-5/biases:0', [64]),
+ (u'dilated-conv-proj-decode-5/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-5/biases:0', [64]),
+ (u'dilated-conv-decode-6/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-6/biases:0', [64]),
+ (u'dilated-conv-proj-decode-6/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-6/biases:0', [64]),
+ (u'dilated-conv-decode-7/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-7/biases:0', [64]),
+ (u'dilated-conv-proj-decode-7/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-7/biases:0', [64]),
+ (u'dilated-conv-decode-8/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-8/biases:0', [64]),
+ (u'dilated-conv-proj-decode-8/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-8/biases:0', [64]),
+ (u'dilated-conv-decode-9/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-9/biases:0', [64]),
+ (u'dilated-conv-proj-decode-9/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-9/biases:0', [64]),
+ (u'dilated-conv-decode-10/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-10/biases:0', [64]),
+ (u'dilated-conv-proj-decode-10/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-10/biases:0', [64]),
+ (u'dilated-conv-decode-11/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-11/biases:0', [64]),
+ (u'dilated-conv-proj-decode-11/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-11/biases:0', [64]),
+ (u'dilated-conv-decode-12/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-12/biases:0', [64]),
+ (u'dilated-conv-proj-decode-12/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-12/biases:0', [64]),
+ (u'dilated-conv-decode-13/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-13/biases:0', [64]),
+ (u'dilated-conv-proj-decode-13/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-13/biases:0', [64]),
+ (u'dilated-conv-decode-14/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-14/biases:0', [64]),
+ (u'dilated-conv-proj-decode-14/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-14/biases:0', [64]),
+ (u'dilated-conv-decode-15/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-15/biases:0', [64]),
+ (u'dilated-conv-proj-decode-15/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-15/biases:0', [64]),
+ (u'dilated-conv-decode-16/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-16/biases:0', [64]),
+ (u'dilated-conv-proj-decode-16/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-16/biases:0', [64]),
+ (u'dilated-conv-decode-17/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-17/biases:0', [64]),
+ (u'dilated-conv-proj-decode-17/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-17/biases:0', [64]),
+ (u'dilated-conv-decode-18/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-18/biases:0', [64]),
+ (u'dilated-conv-proj-decode-18/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-18/biases:0', [64]),
+ (u'dilated-conv-decode-19/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-19/biases:0', [64]),
+ (u'dilated-conv-proj-decode-19/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-19/biases:0', [64]),
+ (u'dilated-conv-decode-20/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-20/biases:0', [64]),
+ (u'dilated-conv-proj-decode-20/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-20/biases:0', [64]),
+ (u'dilated-conv-decode-21/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-21/biases:0', [64]),
+ (u'dilated-conv-proj-decode-21/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-21/biases:0', [64]),
+ (u'dilated-conv-decode-22/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-22/biases:0', [64]),
+ (u'dilated-conv-proj-decode-22/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-22/biases:0', [64]),
+ (u'dilated-conv-decode-23/weights:0', [2, 32, 64]),
+ (u'dilated-conv-decode-23/biases:0', [64]),
+ (u'dilated-conv-proj-decode-23/weights:0', [32, 64]),
+ (u'dilated-conv-proj-decode-23/biases:0', [64]),
+ (u'dense-decode-1/weights:0', [768, 128]),
+ (u'dense-decode-1/biases:0', [128]),
+ (u'dense-decode-2/weights:0', [128, 1]),
+ (u'dense-decode-2/biases:0', [1])]
+[[07/20/2019 07:25:26 AM]] trainable parameter count:
+[[07/20/2019 07:25:26 AM]] 498882
+[[07/20/2019 07:25:36 AM]] [[step        0]]     [[train]]     loss: 1.05967045       [[val]]     loss: 1.09063399       
+[[07/20/2019 07:25:45 AM]] [[step       10]]     [[train]]     loss: 0.90949357       [[val]]     loss: 1.16567034       
+[[07/20/2019 07:25:54 AM]] [[step       20]]     [[train]]     loss: 0.88848677       [[val]]     loss: 1.12952633       
+[[07/20/2019 07:26:03 AM]] [[step       30]]     [[train]]     loss: 0.91232207       [[val]]     loss: 1.13823199       
+[[07/20/2019 07:26:12 AM]] [[step       40]]     [[train]]     loss: 0.94535926       [[val]]     loss: 1.17402378       
+[[07/20/2019 07:26:20 AM]] [[step       50]]     [[train]]     loss: 0.96287731       [[val]]     loss: 1.09585254       
+[[07/20/2019 07:26:29 AM]] [[step       60]]     [[train]]     loss: 1.00682303       [[val]]     loss: 1.06243419       
+[[07/20/2019 07:26:38 AM]] [[step       70]]     [[train]]     loss: 0.99649671       [[val]]     loss: 1.09346084       
+[[07/20/2019 07:26:47 AM]] [[step       80]]     [[train]]     loss: 0.99437032       [[val]]     loss: 1.07465152       
+[[07/20/2019 07:26:55 AM]] [[step       90]]     [[train]]     loss: 0.99216256       [[val]]     loss: 1.09259875       
+[[07/20/2019 07:27:04 AM]] [[step      100]]     [[train]]     loss: 1.010557         [[val]]     loss: 1.07677909       
+[[07/20/2019 07:27:13 AM]] [[step      110]]     [[train]]     loss: 1.02926389       [[val]]     loss: 1.04878959       
+[[07/20/2019 07:27:22 AM]] [[step      120]]     [[train]]     loss: 1.04245504       [[val]]     loss: 1.05656995       
+[[07/20/2019 07:27:30 AM]] [[step      130]]     [[train]]     loss: 1.03485609       [[val]]     loss: 1.04475448       
+[[07/20/2019 07:27:39 AM]] [[step      140]]     [[train]]     loss: 1.06748685       [[val]]     loss: 1.03524593       
+[[07/20/2019 07:27:48 AM]] [[step      150]]     [[train]]     loss: 1.0820657        [[val]]     loss: 1.06031184       
+[[07/20/2019 07:27:57 AM]] [[step      160]]     [[train]]     loss: 1.06537213       [[val]]     loss: 1.07414799       
+[[07/20/2019 07:28:06 AM]] [[step      170]]     [[train]]     loss: 1.07061127       [[val]]     loss: 1.04438531       
+[[07/20/2019 07:28:14 AM]] [[step      180]]     [[train]]     loss: 1.06394092       [[val]]     loss: 1.05425956       
+[[07/20/2019 07:28:23 AM]] [[step      190]]     [[train]]     loss: 1.07080806       [[val]]     loss: 1.04656419       
+[[07/20/2019 07:28:32 AM]] [[step      200]]     [[train]]     loss: 1.0505077        [[val]]     loss: 1.05432391       
+[[07/20/2019 07:28:41 AM]] [[step      210]]     [[train]]     loss: 1.01710154       [[val]]     loss: 1.05286714       
+[[07/20/2019 07:28:49 AM]] [[step      220]]     [[train]]     loss: 1.02312937       [[val]]     loss: 1.0232471        
+[[07/20/2019 07:28:58 AM]] [[step      230]]     [[train]]     loss: 1.01616348       [[val]]     loss: 1.05412041       
+[[07/20/2019 07:29:07 AM]] [[step      240]]     [[train]]     loss: 1.00272612       [[val]]     loss: 1.01664153       
+[[07/20/2019 07:29:16 AM]] [[step      250]]     [[train]]     loss: 0.97838139       [[val]]     loss: 1.03810477       
+[[07/20/2019 07:29:25 AM]] [[step      260]]     [[train]]     loss: 0.96648528       [[val]]     loss: 1.02203946       
+[[07/20/2019 07:29:33 AM]] [[step      270]]     [[train]]     loss: 0.96830834       [[val]]     loss: 1.02698082       
+[[07/20/2019 07:29:42 AM]] [[step      280]]     [[train]]     loss: 0.97191087       [[val]]     loss: 1.02386473       
+[[07/20/2019 07:29:51 AM]] [[step      290]]     [[train]]     loss: 0.94126129       [[val]]     loss: 1.03195542       
+[[07/20/2019 07:30:00 AM]] [[step      300]]     [[train]]     loss: 0.94272413       [[val]]     loss: 1.03632331       
+[[07/20/2019 07:30:08 AM]] [[step      310]]     [[train]]     loss: 0.96669777       [[val]]     loss: 1.06448902       
+[[07/20/2019 07:30:17 AM]] [[step      320]]     [[train]]     loss: 0.94505727       [[val]]     loss: 1.08006565       
+[[07/20/2019 07:30:26 AM]] [[step      330]]     [[train]]     loss: 0.95702193       [[val]]     loss: 1.06395285       
+[[07/20/2019 07:30:35 AM]] [[step      340]]     [[train]]     loss: 0.92204342       [[val]]     loss: 1.06295205       
+[[07/20/2019 07:30:44 AM]] [[step      350]]     [[train]]     loss: 0.91593213       [[val]]     loss: 1.02217792       
+[[07/20/2019 07:30:52 AM]] [[step      360]]     [[train]]     loss: 0.92313308       [[val]]     loss: 1.01914502       
+[[07/20/2019 07:31:01 AM]] [[step      370]]     [[train]]     loss: 0.8995569        [[val]]     loss: 1.01099521       
+[[07/20/2019 07:31:10 AM]] [[step      380]]     [[train]]     loss: 0.88607981       [[val]]     loss: 0.99818499       
+[[07/20/2019 07:31:19 AM]] [[step      390]]     [[train]]     loss: 0.90733587       [[val]]     loss: 0.98690766       
+[[07/20/2019 07:31:28 AM]] [[step      400]]     [[train]]     loss: 0.90701412       [[val]]     loss: 0.96156252       
+[[07/20/2019 07:31:37 AM]] [[step      410]]     [[train]]     loss: 0.90539546       [[val]]     loss: 0.93422844       
+[[07/20/2019 07:31:45 AM]] [[step      420]]     [[train]]     loss: 0.91610176       [[val]]     loss: 0.9364016        
+[[07/20/2019 07:31:54 AM]] [[step      430]]     [[train]]     loss: 0.91973566       [[val]]     loss: 0.90858246       
+[[07/20/2019 07:32:03 AM]] [[step      440]]     [[train]]     loss: 0.94072748       [[val]]     loss: 0.91678072       
+[[07/20/2019 07:32:12 AM]] [[step      450]]     [[train]]     loss: 0.93912897       [[val]]     loss: 0.91025942       
+[[07/20/2019 07:32:21 AM]] [[step      460]]     [[train]]     loss: 0.91074216       [[val]]     loss: 0.92958546       
+[[07/20/2019 07:32:30 AM]] [[step      470]]     [[train]]     loss: 0.9395156        [[val]]     loss: 0.92013091       
+[[07/20/2019 07:32:38 AM]] [[step      480]]     [[train]]     loss: 0.94759948       [[val]]     loss: 0.92601785       
+[[07/20/2019 07:32:47 AM]] [[step      490]]     [[train]]     loss: 0.93513586       [[val]]     loss: 0.9048814        
+[[07/20/2019 07:32:57 AM]] [[step      500]]     [[train]]     loss: 0.9141855        [[val]]     loss: 0.91549828       
+[[07/20/2019 07:33:05 AM]] [[step      510]]     [[train]]     loss: 0.91564829       [[val]]     loss: 0.90613551       
+[[07/20/2019 07:33:14 AM]] [[step      520]]     [[train]]     loss: 0.90625587       [[val]]     loss: 0.88474356       
+[[07/20/2019 07:33:14 AM]] saving model to ./new_checkpoints/model
+[[07/20/2019 07:33:24 AM]] [[step      530]]     [[train]]     loss: 0.88565          [[val]]     loss: 0.88842553       
+[[07/20/2019 07:33:32 AM]] [[step      540]]     [[train]]     loss: 0.86707622       [[val]]     loss: 0.89151384       
+[[07/20/2019 07:33:40 AM]] [[step      550]]     [[train]]     loss: 0.90416578       [[val]]     loss: 0.91302257       
+[[07/20/2019 07:33:47 AM]] [[step      560]]     [[train]]     loss: 0.92865288       [[val]]     loss: 0.89321513       
+[[07/20/2019 07:33:55 AM]] [[step      570]]     [[train]]     loss: 0.92801915       [[val]]     loss: 0.89239793       
+[[07/20/2019 07:34:03 AM]] [[step      580]]     [[train]]     loss: 0.94413462       [[val]]     loss: 0.91724368       
+[[07/20/2019 07:34:10 AM]] [[step      590]]     [[train]]     loss: 0.950248         [[val]]     loss: 0.90478194       
+[[07/20/2019 07:34:18 AM]] [[step      600]]     [[train]]     loss: 0.96880325       [[val]]     loss: 0.91863855       
+[[07/20/2019 07:34:26 AM]] [[step      610]]     [[train]]     loss: 0.96752829       [[val]]     loss: 0.9267265        
+[[07/20/2019 07:34:33 AM]] [[step      620]]     [[train]]     loss: 0.97702229       [[val]]     loss: 0.94811908       
+[[07/20/2019 07:34:41 AM]] [[step      630]]     [[train]]     loss: 1.00042288       [[val]]     loss: 0.94989603       
+[[07/20/2019 07:34:49 AM]] [[step      640]]     [[train]]     loss: 1.01700503       [[val]]     loss: 0.93880451       
+[[07/20/2019 07:34:56 AM]] [[step      650]]     [[train]]     loss: 0.9659445        [[val]]     loss: 0.94078898       
+[[07/20/2019 07:35:04 AM]] [[step      660]]     [[train]]     loss: 0.98024173       [[val]]     loss: 0.94199653       
+[[07/20/2019 07:35:11 AM]] [[step      670]]     [[train]]     loss: 0.97947143       [[val]]     loss: 0.96275862       
+[[07/20/2019 07:35:19 AM]] [[step      680]]     [[train]]     loss: 0.97639318       [[val]]     loss: 0.94063587       
+[[07/20/2019 07:35:27 AM]] [[step      690]]     [[train]]     loss: 0.98050819       [[val]]     loss: 0.92496337       
+[[07/20/2019 07:35:34 AM]] [[step      700]]     [[train]]     loss: 0.98618704       [[val]]     loss: 0.91377122       
+[[07/20/2019 07:35:42 AM]] [[step      710]]     [[train]]     loss: 0.99451857       [[val]]     loss: 0.92148508       
+[[07/20/2019 07:35:50 AM]] [[step      720]]     [[train]]     loss: 0.97789199       [[val]]     loss: 0.89531917       
+[[07/20/2019 07:35:57 AM]] [[step      730]]     [[train]]     loss: 0.97416291       [[val]]     loss: 0.89637698       
+[[07/20/2019 07:36:05 AM]] [[step      740]]     [[train]]     loss: 0.94865252       [[val]]     loss: 0.90996865       
+[[07/20/2019 07:36:13 AM]] [[step      750]]     [[train]]     loss: 0.97321287       [[val]]     loss: 0.87774009       
+[[07/20/2019 07:36:13 AM]] saving model to ./new_checkpoints/model
+[[07/20/2019 07:36:22 AM]] [[step      760]]     [[train]]     loss: 0.94420429       [[val]]     loss: 0.88098257       
+[[07/20/2019 07:36:30 AM]] [[step      770]]     [[train]]     loss: 0.92569407       [[val]]     loss: 0.871534         
+[[07/20/2019 07:36:30 AM]] saving model to ./new_checkpoints/model
+[[07/20/2019 07:36:39 AM]] [[step      780]]     [[train]]     loss: 0.89902268       [[val]]     loss: 0.86346458       
+[[07/20/2019 07:36:39 AM]] saving model to ./new_checkpoints/model
+[[07/20/2019 07:36:49 AM]] [[step      790]]     [[train]]     loss: 0.88812861       [[val]]     loss: 0.88937424       
+[[07/20/2019 07:36:56 AM]] [[step      800]]     [[train]]     loss: 0.86675141       [[val]]     loss: 0.88176006       
+[[07/20/2019 07:37:04 AM]] [[step      810]]     [[train]]     loss: 0.85161845       [[val]]     loss: 0.86804083       
+[[07/20/2019 07:37:12 AM]] [[step      820]]     [[train]]     loss: 0.85062296       [[val]]     loss: 0.89969616       
+[[07/20/2019 07:37:19 AM]] [[step      830]]     [[train]]     loss: 0.87554927       [[val]]     loss: 0.90749019       
+[[07/20/2019 07:37:27 AM]] [[step      840]]     [[train]]     loss: 0.90486918       [[val]]     loss: 0.90568228       
+[[07/20/2019 07:37:35 AM]] [[step      850]]     [[train]]     loss: 0.90445761       [[val]]     loss: 0.92279004       
+[[07/20/2019 07:37:42 AM]] [[step      860]]     [[train]]     loss: 0.8966314        [[val]]     loss: 0.93827957       
+[[07/20/2019 07:37:50 AM]] [[step      870]]     [[train]]     loss: 0.88706381       [[val]]     loss: 0.93161213       
+[[07/20/2019 07:37:58 AM]] [[step      880]]     [[train]]     loss: 0.9023034        [[val]]     loss: 0.9232265        
+[[07/20/2019 07:38:05 AM]] [[step      890]]     [[train]]     loss: 0.9246597        [[val]]     loss: 0.92311579       
+[[07/20/2019 07:38:13 AM]] [[step      900]]     [[train]]     loss: 0.95635179       [[val]]     loss: 0.94091145       
+[[07/20/2019 07:38:21 AM]] [[step      910]]     [[train]]     loss: 0.95354072       [[val]]     loss: 0.96293745       
+[[07/20/2019 07:38:28 AM]] [[step      920]]     [[train]]     loss: 0.97094949       [[val]]     loss: 0.93953526       
+[[07/20/2019 07:38:36 AM]] [[step      930]]     [[train]]     loss: 0.92315949       [[val]]     loss: 0.94455251       
+[[07/20/2019 07:38:44 AM]] [[step      940]]     [[train]]     loss: 0.89736862       [[val]]     loss: 0.93581944       
+[[07/20/2019 07:38:51 AM]] [[step      950]]     [[train]]     loss: 0.90296347       [[val]]     loss: 0.9539682        
+[[07/20/2019 07:38:59 AM]] [[step      960]]     [[train]]     loss: 0.92375492       [[val]]     loss: 0.94864278       
+[[07/20/2019 07:39:07 AM]] [[step      970]]     [[train]]     loss: 0.93366329       [[val]]     loss: 0.96213944       
+[[07/20/2019 07:39:14 AM]] [[step      980]]     [[train]]     loss: 0.93898582       [[val]]     loss: 0.95662471       
+[[07/20/2019 07:39:22 AM]] [[step      990]]     [[train]]     loss: 0.93893796       [[val]]     loss: 0.96628524       
+[[07/20/2019 07:39:30 AM]] [[step     1000]]     [[train]]     loss: 0.90181026       [[val]]     loss: 0.9692645        
+[[07/20/2019 07:39:38 AM]] [[step     1010]]     [[train]]     loss: 0.90351609       [[val]]     loss: 0.95097952       
+[[07/20/2019 07:39:46 AM]] [[step     1020]]     [[train]]     loss: 0.90365587       [[val]]     loss: 0.96237768       
+[[07/20/2019 07:39:53 AM]] [[step     1030]]     [[train]]     loss: 0.93864156       [[val]]     loss: 0.94530117       
+[[07/20/2019 07:40:01 AM]] [[step     1040]]     [[train]]     loss: 0.92994258       [[val]]     loss: 0.96977636       
+[[07/20/2019 07:40:09 AM]] [[step     1050]]     [[train]]     loss: 0.92862838       [[val]]     loss: 0.9712498        
+[[07/20/2019 07:40:16 AM]] [[step     1060]]     [[train]]     loss: 0.92174451       [[val]]     loss: 0.96088667       
+[[07/20/2019 07:40:24 AM]] [[step     1070]]     [[train]]     loss: 0.93211289       [[val]]     loss: 0.9868264        
+[[07/20/2019 07:40:32 AM]] [[step     1080]]     [[train]]     loss: 0.90295511       [[val]]     loss: 1.01793558       
+[[07/20/2019 07:40:39 AM]] [[step     1090]]     [[train]]     loss: 0.91127319       [[val]]     loss: 1.01743973       
+[[07/20/2019 07:40:47 AM]] [[step     1100]]     [[train]]     loss: 0.93520742       [[val]]     loss: 1.00376091       
+[[07/20/2019 07:40:54 AM]] [[step     1110]]     [[train]]     loss: 0.92644809       [[val]]     loss: 0.99009282       
+[[07/20/2019 07:41:02 AM]] [[step     1120]]     [[train]]     loss: 0.93069695       [[val]]     loss: 0.96103319       
+[[07/20/2019 07:41:10 AM]] [[step     1130]]     [[train]]     loss: 0.92395276       [[val]]     loss: 0.95710947       
+[[07/20/2019 07:41:17 AM]] [[step     1140]]     [[train]]     loss: 0.94229277       [[val]]     loss: 0.94469464       
+[[07/20/2019 07:41:25 AM]] [[step     1150]]     [[train]]     loss: 0.95242636       [[val]]     loss: 0.93491357       
+[[07/20/2019 07:41:33 AM]] [[step     1160]]     [[train]]     loss: 0.96177807       [[val]]     loss: 0.93369232       
+[[07/20/2019 07:41:40 AM]] [[step     1170]]     [[train]]     loss: 0.94896645       [[val]]     loss: 0.91392346       
+[[07/20/2019 07:41:48 AM]] [[step     1180]]     [[train]]     loss: 0.97609644       [[val]]     loss: 0.89782379       
+[[07/20/2019 07:41:56 AM]] [[step     1190]]     [[train]]     loss: 0.97668959       [[val]]     loss: 0.88440927       
+[[07/20/2019 07:42:04 AM]] [[step     1200]]     [[train]]     loss: 0.98987606       [[val]]     loss: 0.87966298       
+[[07/20/2019 07:42:11 AM]] [[step     1210]]     [[train]]     loss: 1.0014384        [[val]]     loss: 0.89768502       
+[[07/20/2019 07:42:19 AM]] [[step     1220]]     [[train]]     loss: 0.99046122       [[val]]     loss: 0.90102594       
+[[07/20/2019 07:42:26 AM]] [[step     1230]]     [[train]]     loss: 0.96662093       [[val]]     loss: 0.89105782       
+[[07/20/2019 07:42:34 AM]] [[step     1240]]     [[train]]     loss: 0.93987481       [[val]]     loss: 0.89158552       
+[[07/20/2019 07:42:42 AM]] [[step     1250]]     [[train]]     loss: 0.93061654       [[val]]     loss: 0.90818899       
+[[07/20/2019 07:42:49 AM]] [[step     1260]]     [[train]]     loss: 0.93120773       [[val]]     loss: 0.91966127       
+[[07/20/2019 07:42:57 AM]] [[step     1270]]     [[train]]     loss: 0.94583415       [[val]]     loss: 0.9180751        
+[[07/20/2019 07:43:05 AM]] [[step     1280]]     [[train]]     loss: 0.94942911       [[val]]     loss: 0.91815384       
+[[07/20/2019 07:43:12 AM]] [[step     1290]]     [[train]]     loss: 0.95391026       [[val]]     loss: 0.90495279       
+[[07/20/2019 07:43:20 AM]] [[step     1300]]     [[train]]     loss: 0.92525938       [[val]]     loss: 0.92473079       
+[[07/20/2019 07:43:28 AM]] [[step     1310]]     [[train]]     loss: 0.91328429       [[val]]     loss: 0.91363088       
+[[07/20/2019 07:43:35 AM]] [[step     1320]]     [[train]]     loss: 0.90405131       [[val]]     loss: 0.91693969       
+[[07/20/2019 07:43:43 AM]] [[step     1330]]     [[train]]     loss: 0.94252067       [[val]]     loss: 0.94416365       
+[[07/20/2019 07:43:51 AM]] [[step     1340]]     [[train]]     loss: 0.95804169       [[val]]     loss: 0.9432686        
+[[07/20/2019 07:43:59 AM]] [[step     1350]]     [[train]]     loss: 0.94670632       [[val]]     loss: 0.93552835       
+[[07/20/2019 07:44:06 AM]] [[step     1360]]     [[train]]     loss: 0.93881374       [[val]]     loss: 0.94360203       
+[[07/20/2019 07:44:14 AM]] [[step     1370]]     [[train]]     loss: 0.94650208       [[val]]     loss: 0.94125848       
+[[07/20/2019 07:44:22 AM]] [[step     1380]]     [[train]]     loss: 0.94294002       [[val]]     loss: 0.94221138       
+[[07/20/2019 07:44:29 AM]] [[step     1390]]     [[train]]     loss: 0.92265822       [[val]]     loss: 0.97032308       
+[[07/20/2019 07:44:37 AM]] [[step     1400]]     [[train]]     loss: 0.93614803       [[val]]     loss: 0.96116037       
+[[07/20/2019 07:44:45 AM]] [[step     1410]]     [[train]]     loss: 0.93582072       [[val]]     loss: 0.9946265        
+[[07/20/2019 07:44:52 AM]] [[step     1420]]     [[train]]     loss: 0.94587158       [[val]]     loss: 1.040189         
+[[07/20/2019 07:45:00 AM]] [[step     1430]]     [[train]]     loss: 0.91171866       [[val]]     loss: 1.05515402       
+[[07/20/2019 07:45:08 AM]] [[step     1440]]     [[train]]     loss: 0.92119534       [[val]]     loss: 1.01861823       
+[[07/20/2019 07:45:15 AM]] [[step     1450]]     [[train]]     loss: 0.91724052       [[val]]     loss: 1.01289045       
+[[07/20/2019 07:45:23 AM]] [[step     1460]]     [[train]]     loss: 0.91313901       [[val]]     loss: 1.0080799        
+[[07/20/2019 07:45:31 AM]] [[step     1470]]     [[train]]     loss: 0.87806052       [[val]]     loss: 0.99211945       
+[[07/20/2019 07:45:38 AM]] [[step     1480]]     [[train]]     loss: 0.87277861       [[val]]     loss: 0.97910152       
+[[07/20/2019 07:45:46 AM]] [[step     1490]]     [[train]]     loss: 0.87024545       [[val]]     loss: 0.96794281       
+[[07/20/2019 07:45:54 AM]] [[step     1500]]     [[train]]     loss: 0.85500816       [[val]]     loss: 0.96235559       
+[[07/20/2019 07:46:02 AM]] [[step     1510]]     [[train]]     loss: 0.87461752       [[val]]     loss: 0.9500792        
+[[07/20/2019 07:46:10 AM]] [[step     1520]]     [[train]]     loss: 0.87752675       [[val]]     loss: 0.91396081       
+[[07/20/2019 07:46:17 AM]] [[step     1530]]     [[train]]     loss: 0.91231178       [[val]]     loss: 0.87413913       
+[[07/20/2019 07:46:25 AM]] [[step     1540]]     [[train]]     loss: 0.90247774       [[val]]     loss: 0.89458152       
+[[07/20/2019 07:46:33 AM]] [[step     1550]]     [[train]]     loss: 0.90540912       [[val]]     loss: 0.87482638       
+[[07/20/2019 07:46:40 AM]] [[step     1560]]     [[train]]     loss: 0.9065577        [[val]]     loss: 0.8601789        
+[[07/20/2019 07:46:40 AM]] saving model to ./new_checkpoints/model
+[[07/20/2019 07:46:50 AM]] [[step     1570]]     [[train]]     loss: 0.950834         [[val]]     loss: 0.8785752        
+[[07/20/2019 07:46:58 AM]] [[step     1580]]     [[train]]     loss: 0.92586028       [[val]]     loss: 0.87621746       
+[[07/20/2019 07:47:05 AM]] [[step     1590]]     [[train]]     loss: 0.93186852       [[val]]     loss: 0.87201287       
+[[07/20/2019 07:47:13 AM]] [[step     1600]]     [[train]]     loss: 0.9299986        [[val]]     loss: 0.86714828       
+[[07/20/2019 07:47:21 AM]] [[step     1610]]     [[train]]     loss: 0.91380342       [[val]]     loss: 0.86957133       
+[[07/20/2019 07:47:29 AM]] [[step     1620]]     [[train]]     loss: 0.91835558       [[val]]     loss: 0.8679094        
+[[07/20/2019 07:47:36 AM]] [[step     1630]]     [[train]]     loss: 0.89711405       [[val]]     loss: 0.88382754       
+[[07/20/2019 07:47:44 AM]] [[step     1640]]     [[train]]     loss: 0.91632654       [[val]]     loss: 0.90007007       
+[[07/20/2019 07:47:52 AM]] [[step     1650]]     [[train]]     loss: 0.94694176       [[val]]     loss: 0.90534389       
+[[07/20/2019 07:48:00 AM]] [[step     1660]]     [[train]]     loss: 0.94113346       [[val]]     loss: 0.91403791       
+[[07/20/2019 07:48:07 AM]] [[step     1670]]     [[train]]     loss: 0.9129534        [[val]]     loss: 0.87441635       
+[[07/20/2019 07:48:15 AM]] [[step     1680]]     [[train]]     loss: 0.92965724       [[val]]     loss: 0.89091345       
+[[07/20/2019 07:48:23 AM]] [[step     1690]]     [[train]]     loss: 0.89678106       [[val]]     loss: 0.91421412       
+[[07/20/2019 07:48:30 AM]] [[step     1700]]     [[train]]     loss: 0.91921949       [[val]]     loss: 0.92706146       
+[[07/20/2019 07:48:38 AM]] [[step     1710]]     [[train]]     loss: 0.92426346       [[val]]     loss: 0.92796045       
+[[07/20/2019 07:48:46 AM]] [[step     1720]]     [[train]]     loss: 0.91964099       [[val]]     loss: 0.95610695       
+[[07/20/2019 07:48:54 AM]] [[step     1730]]     [[train]]     loss: 0.92689626       [[val]]     loss: 0.95743209       
+[[07/20/2019 07:49:01 AM]] [[step     1740]]     [[train]]     loss: 0.93809546       [[val]]     loss: 0.9674521        
+[[07/20/2019 07:49:09 AM]] [[step     1750]]     [[train]]     loss: 0.88477017       [[val]]     loss: 0.96664546       
+[[07/20/2019 07:49:17 AM]] [[step     1760]]     [[train]]     loss: 0.88928574       [[val]]     loss: 0.96443426       
+[[07/20/2019 07:49:25 AM]] [[step     1770]]     [[train]]     loss: 0.89936657       [[val]]     loss: 0.98963996       
+[[07/20/2019 07:49:32 AM]] [[step     1780]]     [[train]]     loss: 0.92604143       [[val]]     loss: 1.00089681       
+[[07/20/2019 07:49:40 AM]] [[step     1790]]     [[train]]     loss: 0.95944218       [[val]]     loss: 0.99866039       
+[[07/20/2019 07:49:48 AM]] [[step     1800]]     [[train]]     loss: 0.95231649       [[val]]     loss: 0.98474319       
+[[07/20/2019 07:49:55 AM]] [[step     1810]]     [[train]]     loss: 0.9712232        [[val]]     loss: 0.99069888       
+[[07/20/2019 07:50:03 AM]] [[step     1820]]     [[train]]     loss: 0.97964088       [[val]]     loss: 0.9757304        
+[[07/20/2019 07:50:11 AM]] [[step     1830]]     [[train]]     loss: 0.97260085       [[val]]     loss: 0.99013597       
+[[07/20/2019 07:50:19 AM]] [[step     1840]]     [[train]]     loss: 0.94072107       [[val]]     loss: 0.97128957       
+[[07/20/2019 07:50:26 AM]] [[step     1850]]     [[train]]     loss: 0.95585263       [[val]]     loss: 0.9603955        
+[[07/20/2019 07:50:34 AM]] [[step     1860]]     [[train]]     loss: 0.97708431       [[val]]     loss: 0.95824355       
+[[07/20/2019 07:50:42 AM]] [[step     1870]]     [[train]]     loss: 0.98760838       [[val]]     loss: 0.97929731       
+[[07/20/2019 07:50:50 AM]] [[step     1880]]     [[train]]     loss: 0.96322842       [[val]]     loss: 0.98109105       
+[[07/20/2019 07:50:57 AM]] [[step     1890]]     [[train]]     loss: 0.96742356       [[val]]     loss: 0.9666542        
+[[07/20/2019 07:51:05 AM]] [[step     1900]]     [[train]]     loss: 0.97479823       [[val]]     loss: 0.98272346       
+[[07/20/2019 07:51:13 AM]] [[step     1910]]     [[train]]     loss: 0.97987798       [[val]]     loss: 0.96436114       
+[[07/20/2019 07:51:21 AM]] [[step     1920]]     [[train]]     loss: 0.9725725        [[val]]     loss: 0.95998892       
+[[07/20/2019 07:51:28 AM]] [[step     1930]]     [[train]]     loss: 0.97999369       [[val]]     loss: 0.93213478       
+[[07/20/2019 07:51:36 AM]] [[step     1940]]     [[train]]     loss: 0.99218336       [[val]]     loss: 0.9492976        
+[[07/20/2019 07:51:44 AM]] [[step     1950]]     [[train]]     loss: 0.98634472       [[val]]     loss: 0.97031192       
+[[07/20/2019 07:51:52 AM]] [[step     1960]]     [[train]]     loss: 0.96895254       [[val]]     loss: 0.94978391       
+[[07/20/2019 07:51:59 AM]] [[step     1970]]     [[train]]     loss: 0.96874235       [[val]]     loss: 0.96227852       
+[[07/20/2019 07:52:07 AM]] [[step     1980]]     [[train]]     loss: 0.98980387       [[val]]     loss: 0.96861067       
+[[07/20/2019 07:52:15 AM]] [[step     1990]]     [[train]]     loss: 0.98468056       [[val]]     loss: 0.96976836       
+[[07/20/2019 07:52:23 AM]] [[step     2000]]     [[train]]     loss: 0.96449072       [[val]]     loss: 0.95454051       
+[[07/20/2019 07:52:31 AM]] [[step     2010]]     [[train]]     loss: 0.9500722        [[val]]     loss: 0.95743447       
+[[07/20/2019 07:52:39 AM]] [[step     2020]]     [[train]]     loss: 0.97681733       [[val]]     loss: 0.96539466       
+[[07/20/2019 07:52:47 AM]] [[step     2030]]     [[train]]     loss: 0.98030335       [[val]]     loss: 0.97218257       
+[[07/20/2019 07:52:55 AM]] [[step     2040]]     [[train]]     loss: 0.97438455       [[val]]     loss: 0.97366815       
+[[07/20/2019 07:53:03 AM]] [[step     2050]]     [[train]]     loss: 0.98341301       [[val]]     loss: 0.98233192       
+[[07/20/2019 07:53:11 AM]] [[step     2060]]     [[train]]     loss: 0.99764616       [[val]]     loss: 0.9991459        
+[[07/20/2019 07:53:19 AM]] [[step     2070]]     [[train]]     loss: 0.98321047       [[val]]     loss: 0.98338778       
+[[07/20/2019 07:53:27 AM]] [[step     2080]]     [[train]]     loss: 0.96929658       [[val]]     loss: 0.95307629       
+[[07/20/2019 07:53:35 AM]] [[step     2090]]     [[train]]     loss: 0.94878302       [[val]]     loss: 0.96071643       
+[[07/20/2019 07:53:43 AM]] [[step     2100]]     [[train]]     loss: 0.95617323       [[val]]     loss: 0.9466642        
+[[07/20/2019 07:53:51 AM]] [[step     2110]]     [[train]]     loss: 0.93657118       [[val]]     loss: 0.97142726       
+[[07/20/2019 07:53:59 AM]] [[step     2120]]     [[train]]     loss: 0.90931025       [[val]]     loss: 0.95496657       
+[[07/20/2019 07:54:07 AM]] [[step     2130]]     [[train]]     loss: 0.88551522       [[val]]     loss: 0.95992588       
+[[07/20/2019 07:54:15 AM]] [[step     2140]]     [[train]]     loss: 0.88962006       [[val]]     loss: 0.94632305       
+[[07/20/2019 07:54:23 AM]] [[step     2150]]     [[train]]     loss: 0.88501665       [[val]]     loss: 0.96367737       
+[[07/20/2019 07:54:31 AM]] [[step     2160]]     [[train]]     loss: 0.87684399       [[val]]     loss: 0.95886435       
+[[07/20/2019 07:54:39 AM]] [[step     2170]]     [[train]]     loss: 0.88086563       [[val]]     loss: 0.92222691       
+[[07/20/2019 07:54:47 AM]] [[step     2180]]     [[train]]     loss: 0.89298144       [[val]]     loss: 0.94009572       
+[[07/20/2019 07:54:55 AM]] [[step     2190]]     [[train]]     loss: 0.90283911       [[val]]     loss: 0.94375422       
+[[07/20/2019 07:55:03 AM]] [[step     2200]]     [[train]]     loss: 0.91497105       [[val]]     loss: 0.97583929       
+[[07/20/2019 07:55:11 AM]] [[step     2210]]     [[train]]     loss: 0.94009452       [[val]]     loss: 0.94101726       
+[[07/20/2019 07:55:19 AM]] [[step     2220]]     [[train]]     loss: 0.93870202       [[val]]     loss: 0.93575332       
+[[07/20/2019 07:55:27 AM]] [[step     2230]]     [[train]]     loss: 0.93660566       [[val]]     loss: 0.93127679       
+[[07/20/2019 07:55:35 AM]] [[step     2240]]     [[train]]     loss: 0.93262253       [[val]]     loss: 0.93373831       
+[[07/20/2019 07:55:43 AM]] [[step     2250]]     [[train]]     loss: 0.94285938       [[val]]     loss: 0.89130169       
+[[07/20/2019 07:55:51 AM]] [[step     2260]]     [[train]]     loss: 0.94290897       [[val]]     loss: 0.90962814       
+[[07/20/2019 07:55:59 AM]] [[step     2270]]     [[train]]     loss: 0.92824396       [[val]]     loss: 0.95222954       
+[[07/20/2019 07:56:07 AM]] [[step     2280]]     [[train]]     loss: 0.90399079       [[val]]     loss: 0.94025918       
+[[07/20/2019 07:56:15 AM]] [[step     2290]]     [[train]]     loss: 0.91489695       [[val]]     loss: 0.93679892       
+[[07/20/2019 07:56:23 AM]] [[step     2300]]     [[train]]     loss: 0.93011581       [[val]]     loss: 0.92349098       
+[[07/20/2019 07:56:31 AM]] [[step     2310]]     [[train]]     loss: 0.90064699       [[val]]     loss: 0.93796601       
+[[07/20/2019 07:56:39 AM]] [[step     2320]]     [[train]]     loss: 0.8882008        [[val]]     loss: 0.96587846       
+[[07/20/2019 07:56:47 AM]] [[step     2330]]     [[train]]     loss: 0.89953972       [[val]]     loss: 0.96306993       
+[[07/20/2019 07:56:55 AM]] [[step     2340]]     [[train]]     loss: 0.90657126       [[val]]     loss: 0.9576686        
+[[07/20/2019 07:57:03 AM]] [[step     2350]]     [[train]]     loss: 0.89739232       [[val]]     loss: 0.98824636       
+[[07/20/2019 07:57:11 AM]] [[step     2360]]     [[train]]     loss: 0.89310279       [[val]]     loss: 0.99514462       
+[[07/20/2019 07:57:19 AM]] [[step     2370]]     [[train]]     loss: 0.89212736       [[val]]     loss: 0.94923898       
+[[07/20/2019 07:57:27 AM]] [[step     2380]]     [[train]]     loss: 0.8972447        [[val]]     loss: 0.9470895        
+[[07/20/2019 07:57:35 AM]] [[step     2390]]     [[train]]     loss: 0.88385625       [[val]]     loss: 0.95530734       
+[[07/20/2019 07:57:43 AM]] [[step     2400]]     [[train]]     loss: 0.82307554       [[val]]     loss: 0.97219905       
+[[07/20/2019 07:57:51 AM]] [[step     2410]]     [[train]]     loss: 0.86110418       [[val]]     loss: 0.95355018       
+[[07/20/2019 07:57:59 AM]] [[step     2420]]     [[train]]     loss: 0.84956237       [[val]]     loss: 0.92098302       
+[[07/20/2019 07:58:07 AM]] [[step     2430]]     [[train]]     loss: 0.83012335       [[val]]     loss: 0.93390362       
+[[07/20/2019 07:58:15 AM]] [[step     2440]]     [[train]]     loss: 0.81604142       [[val]]     loss: 0.94604327       
+[[07/20/2019 07:58:23 AM]] [[step     2450]]     [[train]]     loss: 0.83122421       [[val]]     loss: 0.94438783       
+[[07/20/2019 07:58:31 AM]] [[step     2460]]     [[train]]     loss: 0.82534753       [[val]]     loss: 0.94751224       
+[[07/20/2019 07:58:39 AM]] [[step     2470]]     [[train]]     loss: 0.81679531       [[val]]     loss: 0.97766535       
+[[07/20/2019 07:58:47 AM]] [[step     2480]]     [[train]]     loss: 0.8073987        [[val]]     loss: 0.9852571        
+[[07/20/2019 07:58:55 AM]] [[step     2490]]     [[train]]     loss: 0.82027956       [[val]]     loss: 0.95476304       
+[[07/20/2019 07:59:04 AM]] [[step     2500]]     [[train]]     loss: 0.86719281       [[val]]     loss: 0.91994353       
+[[07/20/2019 07:59:12 AM]] [[step     2510]]     [[train]]     loss: 0.84553503       [[val]]     loss: 0.92824644       
+[[07/20/2019 07:59:20 AM]] [[step     2520]]     [[train]]     loss: 0.85846101       [[val]]     loss: 0.93399417       
+[[07/20/2019 07:59:28 AM]] [[step     2530]]     [[train]]     loss: 0.87018936       [[val]]     loss: 0.92802362       
+[[07/20/2019 07:59:35 AM]] [[step     2540]]     [[train]]     loss: 0.88854797       [[val]]     loss: 0.907039         
+[[07/20/2019 07:59:43 AM]] [[step     2550]]     [[train]]     loss: 0.89505754       [[val]]     loss: 0.87762047       
+[[07/20/2019 07:59:51 AM]] [[step     2560]]     [[train]]     loss: 0.92149881       [[val]]     loss: 0.86892962       
+[[07/20/2019 07:59:59 AM]] [[step     2570]]     [[train]]     loss: 0.94995787       [[val]]     loss: 0.85278227       
+[[07/20/2019 07:59:59 AM]] saving model to ./new_checkpoints/model
+[[07/20/2019 08:00:09 AM]] [[step     2580]]     [[train]]     loss: 0.9665483        [[val]]     loss: 0.85616051       
+[[07/20/2019 08:00:17 AM]] [[step     2590]]     [[train]]     loss: 0.98384231       [[val]]     loss: 0.87896065       
+[[07/20/2019 08:00:25 AM]] [[step     2600]]     [[train]]     loss: 0.95581356       [[val]]     loss: 0.91111945       
+[[07/20/2019 08:00:33 AM]] [[step     2610]]     [[train]]     loss: 0.93275346       [[val]]     loss: 0.90036089       
+[[07/20/2019 08:00:41 AM]] [[step     2620]]     [[train]]     loss: 0.96193466       [[val]]     loss: 0.91682277       
+[[07/20/2019 08:00:49 AM]] [[step     2630]]     [[train]]     loss: 0.96451502       [[val]]     loss: 0.91627158       
+[[07/20/2019 08:00:57 AM]] [[step     2640]]     [[train]]     loss: 0.97069926       [[val]]     loss: 0.92436096       
+[[07/20/2019 08:01:05 AM]] [[step     2650]]     [[train]]     loss: 0.95108521       [[val]]     loss: 0.92229131       
+[[07/20/2019 08:01:13 AM]] [[step     2660]]     [[train]]     loss: 0.92126898       [[val]]     loss: 0.9135914        
+[[07/20/2019 08:01:21 AM]] [[step     2670]]     [[train]]     loss: 0.89792504       [[val]]     loss: 0.92649396       
+[[07/20/2019 08:01:29 AM]] [[step     2680]]     [[train]]     loss: 0.90338289       [[val]]     loss: 0.92955835       
+[[07/20/2019 08:01:37 AM]] [[step     2690]]     [[train]]     loss: 0.8956957        [[val]]     loss: 0.91577118       
+[[07/20/2019 08:01:45 AM]] [[step     2700]]     [[train]]     loss: 0.90535747       [[val]]     loss: 0.88442081       
+[[07/20/2019 08:01:53 AM]] [[step     2710]]     [[train]]     loss: 0.91982091       [[val]]     loss: 0.90680072       
+[[07/20/2019 08:02:01 AM]] [[step     2720]]     [[train]]     loss: 0.88655675       [[val]]     loss: 0.88481756       
+[[07/20/2019 08:02:09 AM]] [[step     2730]]     [[train]]     loss: 0.91922276       [[val]]     loss: 0.88027461       
+[[07/20/2019 08:02:17 AM]] [[step     2740]]     [[train]]     loss: 0.90320864       [[val]]     loss: 0.88234624       
+[[07/20/2019 08:02:25 AM]] [[step     2750]]     [[train]]     loss: 0.88972941       [[val]]     loss: 0.91427075       
+[[07/20/2019 08:02:33 AM]] [[step     2760]]     [[train]]     loss: 0.89735261       [[val]]     loss: 0.90884953       
+[[07/20/2019 08:02:41 AM]] [[step     2770]]     [[train]]     loss: 0.9186301        [[val]]     loss: 0.90062636       
+[[07/20/2019 08:02:49 AM]] [[step     2780]]     [[train]]     loss: 0.90472556       [[val]]     loss: 0.89893736       
+[[07/20/2019 08:02:57 AM]] [[step     2790]]     [[train]]     loss: 0.89930054       [[val]]     loss: 0.90364365       
+[[07/20/2019 08:03:05 AM]] [[step     2800]]     [[train]]     loss: 0.89975179       [[val]]     loss: 0.90786966       
+[[07/20/2019 08:03:13 AM]] [[step     2810]]     [[train]]     loss: 0.9188053        [[val]]     loss: 0.89113055       
+[[07/20/2019 08:03:21 AM]] [[step     2820]]     [[train]]     loss: 0.92069614       [[val]]     loss: 0.89948207       
+[[07/20/2019 08:03:29 AM]] [[step     2830]]     [[train]]     loss: 0.86375735       [[val]]     loss: 0.93377432       
+[[07/20/2019 08:03:37 AM]] [[step     2840]]     [[train]]     loss: 0.84983742       [[val]]     loss: 0.94929601       
+[[07/20/2019 08:03:45 AM]] [[step     2850]]     [[train]]     loss: 0.87505796       [[val]]     loss: 0.91793825       
+[[07/20/2019 08:03:53 AM]] [[step     2860]]     [[train]]     loss: 0.86651618       [[val]]     loss: 0.923059         
+[[07/20/2019 08:04:01 AM]] [[step     2870]]     [[train]]     loss: 0.86829116       [[val]]     loss: 0.94424074       
+[[07/20/2019 08:04:09 AM]] [[step     2880]]     [[train]]     loss: 0.86720713       [[val]]     loss: 0.90663189       
+[[07/20/2019 08:04:17 AM]] [[step     2890]]     [[train]]     loss: 0.83634674       [[val]]     loss: 0.90051605       
+[[07/20/2019 08:04:25 AM]] [[step     2900]]     [[train]]     loss: 0.8442031        [[val]]     loss: 0.92291681       
+[[07/20/2019 08:04:33 AM]] [[step     2910]]     [[train]]     loss: 0.84833609       [[val]]     loss: 0.94891788       
+[[07/20/2019 08:04:41 AM]] [[step     2920]]     [[train]]     loss: 0.87012458       [[val]]     loss: 0.96572155       
+[[07/20/2019 08:04:49 AM]] [[step     2930]]     [[train]]     loss: 0.89385054       [[val]]     loss: 0.94899369       
+[[07/20/2019 08:04:57 AM]] [[step     2940]]     [[train]]     loss: 0.91373733       [[val]]     loss: 0.93814993       
+[[07/20/2019 08:05:05 AM]] [[step     2950]]     [[train]]     loss: 0.92239445       [[val]]     loss: 0.93353746       
+[[07/20/2019 08:05:13 AM]] [[step     2960]]     [[train]]     loss: 0.91749809       [[val]]     loss: 0.92116304       
+[[07/20/2019 08:05:21 AM]] [[step     2970]]     [[train]]     loss: 0.89073036       [[val]]     loss: 0.88104058       
+[[07/20/2019 08:05:29 AM]] [[step     2980]]     [[train]]     loss: 0.89843371       [[val]]     loss: 0.89470205       
