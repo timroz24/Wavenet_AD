@@ -24,6 +24,9 @@ lpg_equipment_instance_ids = [
     20170601911,20170600604,20171100239
 ]
 
+lpg_equipment_instance_ids = [
+    20170402060,20170701834,20170600627
+]
 
 
 
